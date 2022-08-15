@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Markers</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+
+        body{
+            line-height: 1.7;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        
+
+        .marker{
+            width: 200px;
+            height: 20px; 
+            margin: 20px auto;
+        }
+
+         .m1{
+
+            background: linear-gradient( rgb(122, 74, 14) 0%, rgb(245, 62, 113) 50%, rgb(162, 27, 27) 100%);
+           /* background-color: red ;  */
+           box-shadow: 3px 3px 10px red;
+        }
+
+        .m2 {
+
+            background: linear-gradient(#036107,#429645,#0f3b11 );
+            /* background-color: green ;  */
+            box-shadow: 3px 3px 10px green;
+        }
+
+        .m3 {
+
+            background: linear-gradient(#313af5, #575bad, #040859);
+            /* background-color: blue ;  */
+            box-shadow: 3px 3px 10px blue;
+        }
+
+        .part2{
+            background : rgba(255, 255, 255, 0.6) ;
+            margin-left: 60px;
+            width: 120px;
+            height: 100%;
+            border-left: 10px double black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Color Markers</h1>
+    <div class="container">
+        <div class="groups">
+            <div class="marker m1">
+                <div class="part1"></div>
+                <div class="part2"></div>
+            </div>
+
+            <div class="marker m2">
+                <div class="part1"></div>
+                <div class="part2"></div>
+            </div>
+
+            <div class="marker m3">
+                <div class="part1"></div>
+                <div class="part2"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
