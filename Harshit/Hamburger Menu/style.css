@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-items
+{
+    /* display: none; */
+    margin-top: 7px;
+    transform: translateX(-110%);
+    transition: all 0.4s ease-in-out;
+    background: #ccc;
+    border: 1px solid black;
+    padding-top: 40px;
+}
+
+.menu-items li
+{
+    list-style: none;
+    padding: 2px;
+    margin-bottom: 1rem;
+    
+}
+
+.humburger-menu input[type="checkbox"]:checked ~ .menu-items
+{
+    /* display: block; */
+    transform: translateX(0%);
+    background-color: black;
+    color: white;
+}
+
+.humburger-menu input[type="checkbox"]:checked ~ .humburger-lines .line
+{
+    background-color: white;
+}
+
+.humburger-menu input[type="checkbox"]
+{
+    display: block;
+    width:40px;
+    height: 32px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 2;
+    opacity: 0;
+}
+
+.humburger-menu
+{
+    /* border: 2px solid red; */
+    position: relative;
+} 
+
+.humburger-lines
+{
+    width: 40px;
+    height: 32px;
+    /* background-color: yellow; */
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.humburger-lines .line 
+{
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+}
+
+
+/* ************************converting 3 lines to cross***************** */
+.humburger-lines .line1
+{
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.humburger-lines .line3
+{
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.humburger-menu input[type="checkbox"]:checked ~ .humburger-lines .line1
+{
+    /* display: block; */
+   transform: rotate(45deg);
+}
+
+
+.humburger-menu input[type="checkbox"]:checked ~ .humburger-lines .line2
+{
+     display: none;
+}
+
+
+
+.humburger-menu input[type="checkbox"]:checked ~ .humburger-lines .line3
+{
+    /* display: block; */
+   transform: rotate(-45deg);
+}
