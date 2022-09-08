@@ -4,4 +4,7 @@
 2. Photos
   A. [Pexels](https://www.pexels.com/)
   B. [Unsplash](https://unsplash.com/)
+  c. [Life of pix] (https://www.lifeofpix.com/)
+  d. [kaboom pics] (https://kaboompics.com/)
 3. [CSS Gradient](https://cssgradient.io/) 
+
