@@ -17,6 +17,7 @@ body{
     background: rgb(204, 204, 204);
     margin: 30px 50px;
     line-height: 1.4;
+    overflow-x: hidden;
 }
 
 .btn{
@@ -39,7 +40,7 @@ img{
 nav ul{
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     list-style: none;
     /* box-shadow: var(--shadow); */
 }
@@ -115,19 +116,25 @@ nav ul a:hover{
 #products .product img{
     display: inline;
     width: 400px;
-    height: 300px
+    height: 300px;
+    margin: auto;
+    
 }
 
 #products{
     margin-top: 1rem;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(autofit, minmax(20rem, 1fr));
-    grid-template-rows: repeat(4, 1fr) ;
+    /* grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
 }
 
 .product{
     margin: 20px;
+}
+
+.product:hover{
+    box-shadow: 1px 1px 1px 1px gray;
 }
 
 
@@ -172,13 +179,13 @@ nav ul a:hover{
 #boxes{
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     place-items: center center;
     margin-top: -30px;
 }
 
 .box{
-    padding: 50px 100px;
+    padding: 50px 50px;
 }
 
 .box:hover{
@@ -218,15 +225,11 @@ footer{
 }
 
 /* ##################### css media queries ############# */
-/* @media screen and (max-width:700px){
-    nav ul{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-
-    }
-
+ @media screen and (max-width:750px){
+    
     .wrapper #top-container{
         display: grid;
+        gap: 10px;
         grid-template-areas:
         'showcase showcase'
         'top-box1 top-box1'
@@ -236,6 +239,7 @@ footer{
     .showcase{
         grid-area: showcase;
         padding-left: 20px;
+        padding-right: 20px;
     }
 
     .top-box1{
@@ -248,10 +252,13 @@ footer{
         padding-bottom: 10px;
     }
 
-
-    #products{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+    #products .product img{
+        display: inline;
+        width: 400px;
+        height: 300px;
+        margin: auto;
+        
     }
+    
 
-} */
+} 
