@@ -9,5 +9,6 @@
 7. [CSS Gradient](https://cssgradient.io/) 
 
 [icons8](https://icons8.com/)
+[fontawesome](https://fontawesome.com/)
 
 ### Font- awesome <script src="https://kit.fontawesome.com/be7db58049.js" crossorigin="anonymous"></script>
