@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+/* ************Utility classes********** */
+
+.lg-heading{
+    font-size: 3.5rem;
+}
+
+.md-heading, .project-info h2{
+    font-size: 2.2rem;
+}
+
+.sm-heading, h4{
+    font-size: 1.6rem;
+}
+
+.small-heading, .services p, .project-info p{
+    font-size: 1.4rem;
+}
+
+/* ******************************************* */
+
+.container{
+    max-width: 1200px;
+    width: 80%;
+    margin: auto;
+    /* position: relative; */
+}
+
+/*header, */.header-container{
+    height: 90vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    /* border: 1px solid black; */
+    position: relative;
+    
+}
+
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* ul{
+    float: right;
+    width: 50%;
+}
+
+nav::after{
+    content: '';
+    display: block;
+    clear: both;
+} */
+
+
+nav ul{
+    padding-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+ul li{
+    margin-left: 100px;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+}
+
+
+ul li:hover{
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+/* ############### Animation ############### */
+header h1{
+    display: block;
+    font-size: 4rem;
+    width: fit-content;
+    position: relative;
+    color: transparent;
+    animation: textani 0.5s ease forwards;
+    animation-delay: 1s ;
+}
+
+header h1:nth-child(1) {
+    animation-delay: 1s;
+}
+
+header h1:nth-child(2) {
+    animation-delay: 2s;
+}
+
+header h1:nth-child(3) {
+    animation: textc 0s ease forwards;
+    animation-delay: 2.5s;
+}
+
+
+span{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background-color:rgb(92, 92, 105);
+   animation: spanani 1s ease;
+   animation-delay: 0.5s;
+}
+
+
+header h1:nth-child(1) span{
+    animation-delay: 0.5s;
+}
+
+header h1:nth-child(2) span{
+    animation-delay: 1s;
+}
+
+header h1:nth-child(3) span{
+    animation-delay: 1.5s;
+}
+
+
+
+
+
+@keyframes spanani {
+    50%{
+        width: 100%;
+        left: 0;
+    }
+
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes textani{
+    100%{
+        color: white;
+    }
+}
+
+
+@keyframes textc{
+    100%{
+        color: blue;
+    }
+}
+
+
+/* ################## Services ########### */
+
+#services{
+    background-color: rgba(195, 192, 192, 0.516);
+}
+
+.services-container{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: grid;
+    gap: 20px ;
+    place-content: center center;
+}
+
+#services h1{
+    text-align: center;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.services{
+    padding-top: 30px;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.service h4{
+    margin-bottom: 0.7rem;
+}
+
+.service i{
+    margin-bottom: 2rem;
+}
+
+.service{
+    padding: 1rem;
+    display: grid;
+    place-items: center center;
+}
+
+.service:hover{
+    box-shadow: 1px 1px 5px 1px gray;
+    transform: scale(1.1);
+}
+
+/* .service:nth-last-child(2), .service:nth-last-child(1){
+    display: grid;
+    justify-content: center center;
+} */
+
+
+
+/* ########################Projects######################### */
+
+
+#projects{
+    background-color: rgba(183, 183, 183, 0.914);
+}
+
+#projects h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
+.projects-container{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: grid;
+    gap: 20px ;
+}
+
+.all-projects{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+
+
+#projects .project-img{
+    margin: auto;
+    height: 250px;
+    width: 300px;
+    margin: 10px;
+}
+
+#projects .project-img img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: fill;
+}
+
+.project-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.project-item .project-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* margin: 0 0 10px 0;
+    padding-left: 5px;
+    padding-right: 5px; */
+    padding: 10px;
+}
+
+.project-info h2, .project-info h4{
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.2rem ;
+}
+
+.project-item:hover{
+    box-shadow: 0 0 10px 1px gray;
+    transform: scale(1.1);
+}
+
+
+.project-item:hover .project-info
+{
+    background-color: rgb(85, 85, 145);
+}
+
+
+
+/* ################### About Me  in grid###################### */
+
+#About{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.about-content{
+    display: grid;
+    gap: 20px ;
+    grid-auto-flow: column;
+    grid-auto-columns: 65% 30%;
+}
+
+ #About .about-me-pic{
+    margin: auto;
+    width: 260px;
+    height: 300px;
+    position: relative;
+}
+
+#About .about-me-pic img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border: 4px solid white;
+    /*position: absolute;
+    top: -100px; */
+}
+ 
+/*#About .about-me-pic{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+     border: 4px solid blue;
+    position: absolute;
+    top: -100px;
+
+     position: relative; 
+}*/
+
+
+#About .about-me-pic::after{
+   content: '';
+   display: block;
+   position: absolute;
+   width: 200px;
+   height: 300px;
+   top: 20px;
+   left: -20px;
+   border: 5px solid rgb(98, 98, 198);
+   z-index: -1;
+} 
+
+#About h1{
+    text-align: center; 
+     display: inline;
+    font-weight: 800;
+    padding: 1rem;
+    border-bottom: 2px solid rgb(98, 98, 198);
+    text-transform: uppercase;
+}
+
+#About h4{
+    /* text-align: center; */
+    padding-top: 3rem;
+    padding-left: 1rem;
+}
+
+.about-me-text p{
+    font-size: 1.5rem;
+    line-height: 1.5 ;
+    padding: 10px ;
+    font-weight: 500;
+}
+
+.about-me-text a{
+    display: block;
+    width: 300px;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid rgb(98, 98, 198);
+    margin: auto;
+    padding: 10px;
+}
+
+/* ############### about me in flex ############### */
+
+/*#About{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.about-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.left{
+    flex-basis: 70%;
+}
+
+.right{
+    flex-basis: 260px;
+    height: 400px;
+}
+
+#About .about-me-pic{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+/*}
+ 
+#About .about-me-pic img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+
+} */
+
+/* #######################Contact Me############################## */
+#contacts h1{
+    /* text-align: center; */
+    display: inline;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgb(98, 98, 198);
+}
+
+#contacts{
+
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        background: rgb(233, 231, 231);
+    
+}
+
+.contact-container{
+    display: grid;
+    gap: 20px;
+}
+
+.contact-info{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding-top: 2rem;
+}
+
+.contact{
+    text-align: center;
+    padding: 1rem;
+}
+
+.contact-text h3{
+    padding: 0.5rem;
+   
+}
+
+.contact-text p{
+    font-weight: 500;
+    padding-top: 0.8rem;
+}
+
+.contact:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 2px gray;
+    box-sizing: border-box;
+}
+
+
+
+/* ########################footer############################### */
+
+footer{
+    background: rgba(210, 205, 205, 0.632);
+}
+
+.s-m-links{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: grid;
+    gap: 20px;
+    grid-auto-flow: column;
+    justify-items: center;
+    align-items: center;
+    place-content: center;
+}
+
+/* #########################3 css media queries ########################### */
+
+@media screen and (max-width: 770px){
+    
+    .about-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .about-me-text{
+        order: 2;
+    }
+
+    .about-me-pic{
+        order: 1;
+    }
+
+    #About .about-me-pic::after{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 200px;
+        height: 300px;
+        top: 10px;
+        left: -10px;
+        border: 5px solid rgb(98, 98, 198);
+        z-index: -1;
+     } 
+    #About h4{
+        text-align: center;
+        margin-left: -60px;
+    }
+
+    .about-me-text a{
+        margin-top: 1rem;
+    }
+}
