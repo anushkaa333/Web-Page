@@ -1,0 +1,594 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap'); */
+
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+}
+
+
+body{
+    line-height: 1.4;
+}
+
+
+/* ######################## Utility Classes ################################# */
+.lg-heading{
+    font-size: 3.5rem;
+}
+
+.md-heading{
+    font-size: 2.2rem;
+}
+
+.sm-heading{
+    font-size: 1.8rem;
+}
+
+
+.container{
+    max-width: 1200px;
+    width: 80%;
+    margin: auto;
+}
+
+header{
+    background-image: url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+}
+
+header h1{
+    font-family: 'Metal Mania', cursive;
+    text-align: center;
+}
+
+nav ul{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+ul a{
+    text-decoration: none;
+    list-style: none;
+    margin-left: 100px;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.header-content{
+    height: 40vh;
+    /* border: 10px solid red; */
+    position: relative;
+}
+
+.header-content .head-c{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 10px solid green; */
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.head-c button{
+    margin-top: 20px;
+    font-size: 1.8rem;
+    padding: rem;
+}
+
+.head-c i{
+    font-size: 4rem;
+    margin: auto;
+    margin-top: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 10px;
+}  
+
+
+/* ########################## MUSIC ################################ */
+
+.music{
+    margin: 100px auto;
+    /* border: 2px solid red; */
+}
+
+
+.music-title{
+    text-align: center;
+    margin: auto;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+}
+
+.music-albums{
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* justify-items: center; */
+    /* align-items: center; */ /*place-items wont work here*/
+    place-content: center center; 
+}
+
+.imagee{
+    margin: auto;
+    height: 265px;
+    width: 400px;
+    /* border: 1px solid green; */
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.music-album{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.music-album h3, .music-album button{
+    font-size: 1.4rem;
+    margin: 10px;
+}
+
+.btn{
+    width: 20%;
+    padding: 10px;
+    background-color: rgba(251, 164, 82, 0.985);
+    outline: none;
+    border: none;
+    border-radius: 10%;
+}
+
+/* ######################### footer ########################## */
+
+.s-m-links{
+    /* display: grid;
+    grid-auto-flow: row;
+    gap: 20px;
+    place-content: center center;
+    place-items: center center; */
+
+    text-align: center;
+}
+
+
+footer{
+    padding: 10px;
+    background-color: rgba(251, 164, 82, 0.985);
+}
+
+
+.s-m-links a{
+    margin-left: 30px;
+    color: black;
+}
+
+
+
+/* ###########################About################################# */
+
+.about{
+    margin: 40px auto;
+}
+
+
+.about-desc .i3 {
+    float: left;
+    margin: auto 20px;
+    width: 300px;
+    height: 200px;
+    /* border: 2px solid black;  */
+}
+
+.i3 img{
+    max-width: 100%;
+    max-height: 100%;
+    /* shape-outside: circle(50%);
+    border-radius: 50%; */
+}
+
+.about h2{
+    text-align: center;
+    margin-bottom: 20px ;
+    font-size: 2.8rem;
+    letter-spacing: 0.3em;
+}
+
+/* .about-desc::after{
+    content: '';
+    display: block;
+    clear: both;
+    border: 2px solid green;
+} */
+
+.about-desc .abt-text{
+    /* width: 45%;
+    float: right; */
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-indent: 40px;
+    /* border: 2px solid yellow; */
+} 
+
+/* ############################### Merch ######################### */
+
+.merch{
+    margin: 60px auto;
+}
+
+
+.merch-title{
+    text-align: center;
+    margin: auto;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+}
+
+.merch-albums{
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* justify-items: center; */
+    /* align-items: center; */ /*place-items wont work here*/
+    place-content: center center; 
+}
+
+.imagee{
+    margin: auto;
+    height: 265px;
+    width: 400px;
+    /* border: 1px solid green; */
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.merch-album{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.merch-album h3, .merch-album button{
+    font-size: 1.4rem;
+    margin: 10px;
+}
+
+.album-details{
+    width: 300px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 50% 50%;
+    place-items: center center;
+    /* border: 1px solid yellow; */
+}
+
+.album-details .store-btn{
+    /* width: 20%;*/
+    padding: 10px; 
+    background-color: rgba(251, 164, 82, 0.985);
+    border: none;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    /* outline: none;
+    border: none;
+    border-radius: 10%; */
+} 
+
+.album-details span{
+    width: 100%;
+    justify-self: start;
+    align-self: center;
+    font-size: 1.5rem;
+    /* border: 1px solid green; */
+    
+}
+
+.album-details button{
+    width: 80%;
+    place-self: center end;
+    /* border: 1px solid red; */
+    border-radius: 10%;
+}
+
+
+.album-details button:hover{
+    background-color: rgba(165, 96, 32, 0.985);
+}
+
+/* ############################# tour ############################ */
+
+.tours{
+    padding: 40px;
+    margin-bottom: 10px;
+}
+
+.tours-details{
+    padding: 5px;
+    /* display: grid;
+    justify-content: center;
+    align-content: center; */
+    /* border: 1px solid red; */
+}
+
+.tour-detail{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    /* border: 1px solid green; */
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+
+.tours-title{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 40px;
+}
+
+.tour-c{
+    margin-left: 20px;
+    /* border: 1px solid red; */
+    font-size: 2rem;
+    display: inline-block;
+}
+
+.tour-date{
+    width: 10%;  
+    font-weight: bold;
+    text-align: center;
+}
+
+.tour-location{
+    
+    width: 30%;
+    text-align: center;
+}
+
+.tour-center{
+    width: 20%;
+    text-align: center;
+}
+
+.tour-detail button{
+    display: inline-block;
+    width: 20%;
+    background-color: rgba(251, 164, 82, 0.985);
+    border: none;
+    border-radius: 5px;
+    padding: 0.4rem;
+    font-weight: bold;
+}
+
+.tour-detail button:hover{
+    background-color: rgba(165, 96, 32, 0.985);
+}
+
+.tour-detail:last-child{
+    border: none;
+}
+
+.purchase-btn{
+    margin: 25px auto;
+    text-align: center;
+}
+
+.purchase-b{
+    font-size: 2.2rem;
+    padding: 10px;
+    border: none;
+    background-color: rgba(165, 96, 32, 0.985);
+    color: white;
+    letter-spacing: 0.2rem;
+}
+
+
+/* ############################## Cart ################################### */
+
+.cart-row{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+
+
+.cart-item{
+    width: 35%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+    padding-left: 2px;  
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-quantity-input{
+    width: 50px;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child{
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column{
+    border: none;
+}
+
+.cart-total{
+    width: 90%;
+    text-align: end;
+}
+
+.cart-title{
+    text-align: center;
+}
+
+.cart-header{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.remove-btn{
+    font-size: 11px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(165, 96, 32, 0.985);
+    color: white;
+    letter-spacing: 0.2rem;
+}
+
+.cart-total h2 .cart-total h4{
+    display: inline-block;
+}
+
+
+/* ############################# CSS Media Queries################################# */
+@media all and (max-width:750px){
+    html{
+        font-size: 50%;
+    }
+
+    
+}
+
+@media all and (max-width:650px){
+
+
+    ul a{
+        margin-left: 50px;
+    }
+
+    .tour-detail{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tour-detail button{
+        display: inline-block;
+        width: 20%;
+        background-color: rgba(251, 164, 82, 0.985);
+        border: none;
+        border-radius: 5px;
+        padding: 0.4rem;
+        font-weight: bold;
+    }
+    
+}
+
+@media all and (max-width:630px){
+
+
+
+    .tour-detail button{
+        display: inline-block;
+        width: 30%;
+        background-color: rgba(251, 164, 82, 0.985);
+        border: none;
+        border-radius: 5px;
+        padding: 0.4rem;
+        font-weight: bold;
+    }
+    
+}
+
+
+@media all and (max-width:500px){
+
+
+
+    .tour-detail button{
+        display: inline-block;
+        width: 40%;
+        background-color: rgba(251, 164, 82, 0.985);
+        border: none;
+        border-radius: 5px;
+        padding: 0.4rem;
+        font-weight: bold;
+    }
+    
+}
+
+
+@media all and (max-width:450px){
+
+    ul a{
+        margin-left: 35px;
+    }
+
+    .header-content .head-c{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* border: 10px solid green; */
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .tour-detail button{
+        display: inline-block;
+        width: 45%;
+        background-color: rgba(251, 164, 82, 0.985);
+        border: none;
+        border-radius: 5px;
+        padding: 0.4rem;
+        font-weight: bold;
+    }
+    
+}
+
